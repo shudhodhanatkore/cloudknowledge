@@ -3,10 +3,10 @@ MAINTAINER waghmaresinnu@gmail.com
 RUN yum install -y httpd \
 zip \
 unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
+ADD https://freewebsitetemplates.com/preview/hairstylesalon/index.html /var/www/html/
 WORKDIR /var/www/html
-RUN unzip kindle.zip
-RUN cp -rvf markups-kindle/* .
-RUN rm -rf _MACOSX markups-kindle kindle.zip
+RUN index.html
+RUN cp -rvf index.html/* .
+RUN rm -rf index.html
 CMD["/usr/bin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
